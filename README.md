@@ -7,7 +7,7 @@
 ```objc
 obj.field(*).where({id:001}).select();
 ```
-> 刚从内网gitlab,没上pod,很多东西暂时没有
+> 刚从内网gitlab转过来,没上pod,很多东西暂时没有
 
 具体用法注释其实已经写的很清楚:
 ```objc
