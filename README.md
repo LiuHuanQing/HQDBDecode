@@ -5,11 +5,11 @@
 
 敬请期待2.0版 的语法:
 
-```
+```objc
 obj.field(*).where({id:001}).select();
 ```
 具体用法:
-```
+```objc
 #pragma mark - 增
 /** 单条插入 */
 - (BOOL)hq_insert;
