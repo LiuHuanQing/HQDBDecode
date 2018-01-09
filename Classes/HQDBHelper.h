@@ -28,5 +28,9 @@ __LINE__,   \
 #endif
 
 @interface HQDBHelper : NSObject
+//获取对应的fmdb处理队列
 + (FMDatabaseQueue *)queueWithClass:(Class)cls;
+
+//设置数据库秘钥
++ (void)setSecrtKey:(NSString *)secrtKey;
 @end

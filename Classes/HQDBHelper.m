@@ -10,6 +10,7 @@
 #import "NSObject+HQDBDecode.h"
 @interface HQDBHelper()
 @property (nonatomic,strong) NSMutableDictionary *dbQueues;
+@property (nonatomic,strong) NSString *secrtKey;
 @end
 
 @implementation HQDBHelper
@@ -63,10 +64,21 @@
                 return nil;
             }
             
+            if(self.secrtKey && self.secrtKey.length)
+            {
+                [dbQueue inDatabase:^(FMDatabase *db) {
+                    [db setKey:self.secrtKey];
+                }];
+            }
             [self.dbQueues setObject:dbQueue forKey:dbName];
         }
         return dbQueue;
     };
+}
+
++ (void)setSecrtKey:(NSString *)secrtKey
+{
+    [HQDBHelper sharedInstance].secrtKey = secrtKey;
 }
 
 + (FMDatabaseQueue *)queueWithClass:(Class)cls
