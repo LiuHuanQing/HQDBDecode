@@ -49,7 +49,7 @@
         HQLogError(@"%@:hq_dbName为空,找不到所属库",NSStringFromClass(cls));
         return nil;
     }
-
+    
     @synchronized(self){
         //创建库
         FMDatabaseQueue *dbQueue = [self.dbQueues objectForKey:dbName];
@@ -87,3 +87,4 @@
 }
 
 @end
+

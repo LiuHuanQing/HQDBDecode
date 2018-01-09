@@ -34,3 +34,4 @@ __LINE__,   \
 //设置数据库秘钥
 + (void)setSecrtKey:(NSString *)secrtKey;
 @end
+
