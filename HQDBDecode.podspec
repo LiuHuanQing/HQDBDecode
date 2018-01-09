@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "HQDBDecode"
-  s.version      = "1.0.4"
+  s.version      = "1.0.3"
   s.summary      = "数据库对象映射模型"
 
   s.description  = <<-DESC
@@ -80,6 +80,6 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency 'FMDB/SQLCipher', :git => 'https://github.com/suweiz19890921/fmdb.git'
+  s.dependency 'FMDB/SQLCipher', "~> 2.7.4"
   s.dependency "YYModel", "~> 1.0.4"
 end
